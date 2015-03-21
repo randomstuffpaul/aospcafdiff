@@ -18,6 +18,7 @@ endif
 #----------------------------------------------------------------------
 # Compile Linux Kernel
 #----------------------------------------------------------------------
+ifeq ($(strip $(TARGET_NO_KERNEL)),false)
 ifeq ($(KERNEL_DEFCONFIG),)
     KERNEL_DEFCONFIG := msm8994_defconfig
 endif
@@ -26,6 +27,7 @@ include kernel/AndroidKernel.mk
 
 $(INSTALLED_KERNEL_TARGET): $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
+endif
 
 #----------------------------------------------------------------------
 # Copy additional target-specific files

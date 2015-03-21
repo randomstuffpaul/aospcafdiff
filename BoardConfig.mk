@@ -16,11 +16,8 @@ TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
 TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
-ifneq ($(TARGET_USES_AOSP), true)
-TARGET_2ND_CPU_VARIANT := cortex-a53
-else
 TARGET_2ND_CPU_VARIANT := cortex-a9
-endif
+
 NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_NO_BOOTLOADER := false
 BOOTLOADER_PLATFORM := msm8994 # use msm8994 LK configuration
@@ -59,10 +56,12 @@ BOARD_KERNEL_PAGESIZE    := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x01E00000
 BOARD_RAMDISK_OFFSET     := 0x02000000
 
+TARGET_USES_AOSP := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 TARGET_USES_UNCOMPRESSED_KERNEL := true
+TARGET_COMPILE_WITH_MSM_KERNEL := false
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
@@ -72,8 +71,6 @@ TARGET_NO_RPC := true
 
 TARGET_PLATFORM_DEVICE_BASE := /devices/soc.0/
 TARGET_INIT_VENDOR_LIB := libinit_msm
-
-TARGET_LDPRELOAD := libNimsWrap.so
 
 #Add NON-HLOS files for ota upgrade
 ADD_RADIO_FILES := true
@@ -85,10 +82,10 @@ TARGET_RECOVERY_UPDATER_LIBS := librecovery_updater_msm
 BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # Added to indicate that protobuf-c is supported in this build
-PROTOBUF_SUPPORTED := true
+PROTOBUF_SUPPORTED := false
 
 #Enable HW based full disk encryption
-TARGET_HW_DISK_ENCRYPTION := true
+TARGET_HW_DISK_ENCRYPTION := false
 
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
