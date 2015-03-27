@@ -31,7 +31,6 @@ on early-init
     mkdir /firmware 0771 system system
     mkdir /bt_firmware 0771 system system
     symlink /data/tombstones /tombstones
-    symlink /dev/block/platform/soc.0 /dev/block/bootdevice
 
 on fs
     mount_all fstab.qcom
@@ -60,6 +59,7 @@ on post-fs-data
     mkdir /data/misc/dts 0770 media audio
 
 on boot
+    symlink /dev/block/platform/soc.0 /dev/block/bootdevice
     start rmt_storage
     start rfs_access
     write /sys/bus/i2c/devices/2-004a/update_fw 1
