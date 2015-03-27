@@ -22,6 +22,7 @@ NUM_FRAMEBUFFER_SURFACE_BUFFERS := 3
 TARGET_NO_BOOTLOADER := false
 BOOTLOADER_PLATFORM := msm8994 # use msm8994 LK configuration
 TARGET_NO_KERNEL := false
+TARGET_KERNEL_APPEND_DTB := true
 -include $(QCPATH)/common/msm8992/BoardConfigVendor.mk
 MINIMAL_FONT_FOOTPRINT := true
 # Some framework code requires this to enable BT
