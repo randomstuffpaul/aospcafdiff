@@ -85,6 +85,9 @@ BOARD_QTI_CAMERA_32BIT_ONLY := true
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := false
+# Added to indicate that libxml2 is not supported in this build
+# remove (or set to false) when libxml2 is available as shared library
+LIBXML_UNSUPPORTED := true
 
 #Enable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := false
