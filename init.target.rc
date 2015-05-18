@@ -110,11 +110,11 @@ service qseecomd /system/bin/qseecomd
    user root
    group root
 
-service qmpd /system/bin/qmpd
-   class core
-   user system
-   group system
-   socket qmpdw dgram 0666 system system
+#service seempd /system/bin/seempd
+#   class core
+#   user system
+#   group system
+#   socket seempdw dgram 0666 system system
 
 service perfd /system/bin/perfd
    class main
@@ -232,3 +232,22 @@ service energy-awareness /system/bin/energy-awareness
     group system
     oneshot
 
+service dts_configurator /system/bin/dts_configurator
+    class late_start
+    user system
+    group system media audio
+    oneshot
+
+service dtseagleservice /system/bin/dts_eagle_service
+    class late_start
+    user system
+    group audio media
+    disabled
+
+on property:init.svc.dts_configurator=stopped
+    start dtseagleservice
+
+service fidodaemon /system/vendor/bin/fidodaemon
+    class late_start
+    user system
+    group system
