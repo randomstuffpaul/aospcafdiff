@@ -36,6 +36,9 @@ PRODUCT_DEVICE := msm8992
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8992 for arm64
 
+PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += com.qti.dpmframework
+
 # default is nosdcard, S/W button enabled in resource
 PRODUCT_CHARACTERISTICS := nosdcard
 
