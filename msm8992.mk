@@ -45,6 +45,7 @@ PRODUCT_BOOT_JARS += qcmediaplayer
 PRODUCT_BOOT_JARS += vcard
 PRODUCT_BOOT_JARS += tcmiface
 PRODUCT_BOOT_JARS += com.qti.dpmframework
+PRODUCT_BOOT_JARS += oem-services
 
 ifneq ($(strip $(QCPATH)),)
 PRODUCT_BOOT_JARS += qcom.fmradio
