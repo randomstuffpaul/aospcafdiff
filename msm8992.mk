@@ -36,19 +36,19 @@ PRODUCT_DEVICE := msm8992
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8992 for arm64
 
-PRODUCT_BOOT_JARS += qcmediaplayer
-#PRODUCT_BOOT_JARS += extendedmediaextractor
-#PRODUCT_BOOT_JARS += org.codeaurora.Performance
-#PRODUCT_BOOT_JARS += security-bridge
-#PRODUCT_BOOT_JARS += qsb-port
 PRODUCT_BOOT_JARS += vcard
 PRODUCT_BOOT_JARS += tcmiface
+#PRODUCT_BOOT_JARS += qcmediaplayer
+#PRODUCT_BOOT_JARS += org.codeaurora.Performance
 
 ifneq ($(strip $(QCPATH)),)
 PRODUCT_BOOT_JARS += qcom.fmradio
-PRODUCT_BOOT_JARS += WfdCommon
 PRODUCT_BOOT_JARS += com.qti.dpmframework
 PRODUCT_BOOT_JARS += oem-services
+#PRODUCT_BOOT_JARS += WfdCommon
+#PRODUCT_BOOT_JARS += extendedmediaextractor
+#PRODUCT_BOOT_JARS += security-bridge
+#PRODUCT_BOOT_JARS += qsb-port
 endif
 
 #Android EGL implementation
