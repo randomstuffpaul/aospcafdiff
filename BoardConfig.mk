@@ -30,6 +30,8 @@ TARGET_KERNEL_APPEND_DTB := true
 MINIMAL_FONT_FOOTPRINT := true
 # Some framework code requires this to enable BT
 BOARD_HAVE_BLUETOOTH := true
+BOARD_USES_WIPOWER := true
+
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/qcom/common
 
 USE_OPENGL_RENDERER := true
