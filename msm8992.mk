@@ -116,6 +116,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     device/qcom/msm8992/sensors/hals.conf:system/etc/sensors/hals.conf
 
+# MIDI feature
+PRODUCT_COPY_FILES += \
+    frameworks/native/data/etc/android.software.midi.xml:system/etc/permissions/android.software.midi.xml
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
