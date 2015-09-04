@@ -113,3 +113,6 @@ ifeq ($(HOST_OS),linux)
     endif
   endif
 endif
+
+# Enable sensor multi HAL
+USE_SENSOR_MULTI_HAL := true

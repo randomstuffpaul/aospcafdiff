@@ -111,6 +111,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.sensor.stepcounter.xml:system/etc/permissions/android.hardware.sensor.stepcounter.xml \
     frameworks/native/data/etc/android.hardware.sensor.stepdetector.xml:system/etc/permissions/android.hardware.sensor.stepdetector.xml \
 
+PRODUCT_COPY_FILES += \
+    device/qcom/msm8992/sensors/hals.conf:system/etc/sensors/hals.conf
+
 #ANT+ stack
 PRODUCT_PACKAGES += \
     AntHalService \
