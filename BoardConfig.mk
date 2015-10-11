@@ -100,6 +100,7 @@ LIBXML_UNSUPPORTED := true
 
 #Enable HW based full disk encryption
 TARGET_HW_DISK_ENCRYPTION := false
+TARGET_CRYPTFS_HW_PATH := device/qcom/common/cryptfs_hw
 
 #Enable peripheral manager
 TARGET_PER_MGR_ENABLED := true
