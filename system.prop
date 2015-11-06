@@ -39,11 +39,6 @@ persist.spkr.cal.duration=0
 qcom.hw.aac.encoder=true
 
 #
-# system props for the dpm module
-#
-persist.dpm.feature=3
-
-#
 # system props for the cne module
 #
 persist.cne.feature=1
