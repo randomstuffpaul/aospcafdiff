@@ -11,13 +11,13 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8992/overlay
+#DEVICE_PACKAGE_OVERLAYS := device/qcom/msm8992/overlay
 
 ifneq ($(TARGET_USES_AOSP),true)
-TARGET_USES_QCA_NFC := true
+TARGET_USES_QCA_NFC := false
 TARGET_USES_QCOM_BSP := true
 endif
-TARGET_ENABLE_QC_AV_ENHANCEMENTS := true
+TARGET_ENABLE_QC_AV_ENHANCEMENTS := false
 
 # copy customized media_profiles and media_codecs xmls for 8992
 ifeq ($(TARGET_ENABLE_QC_AV_ENHANCEMENTS), true)
@@ -39,18 +39,18 @@ PRODUCT_DEVICE := msm8992
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8992 for arm64
 
-PRODUCT_BOOT_JARS += vcard
-PRODUCT_BOOT_JARS += tcmiface
-PRODUCT_BOOT_JARS += qcmediaplayer
+#PRODUCT_BOOT_JARS += vcard
+#PRODUCT_BOOT_JARS += tcmiface
+#PRODUCT_BOOT_JARS += qcmediaplayer
 #PRODUCT_BOOT_JARS += org.codeaurora.Performance
 
 ifneq ($(strip $(QCPATH)),)
-PRODUCT_BOOT_JARS += qcom.fmradio
-PRODUCT_BOOT_JARS += com.qti.dpmframework
-PRODUCT_BOOT_JARS += dpmapi
-PRODUCT_BOOT_JARS += com.qti.location.sdk
-PRODUCT_BOOT_JARS += oem-services
-PRODUCT_BOOT_JARS += WfdCommon
+#PRODUCT_BOOT_JARS += qcom.fmradio
+#PRODUCT_BOOT_JARS += com.qti.dpmframework
+#PRODUCT_BOOT_JARS += dpmapi
+#PRODUCT_BOOT_JARS += com.qti.location.sdk
+#PRODUCT_BOOT_JARS += oem-services
+#PRODUCT_BOOT_JARS += WfdCommon
 #PRODUCT_BOOT_JARS += extendedmediaextractor
 #PRODUCT_BOOT_JARS += security-bridge
 #PRODUCT_BOOT_JARS += qsb-port
@@ -60,13 +60,13 @@ endif
 PRODUCT_PACKAGES += libGLES_android
 
 # Audio configuration file
-ifeq ($(TARGET_USES_AOSP), true)
+#ifeq ($(TARGET_USES_AOSP), true)
 PRODUCT_COPY_FILES += \
     device/qcom/common/media/audio_policy.conf:system/etc/audio_policy.conf
-else
-PRODUCT_COPY_FILES += \
+#else
+#PRODUCT_COPY_FILES += \
     device/qcom/msm8992/audio_policy.conf:system/etc/audio_policy.conf
-endif
+#endif
 
 PRODUCT_COPY_FILES += \
     device/qcom/msm8992/audio_output_policy.conf:system/vendor/etc/audio_output_policy.conf \
