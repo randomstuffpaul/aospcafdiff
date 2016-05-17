@@ -45,7 +45,7 @@ PRODUCT_BOOT_JARS += tcmiface
 #PRODUCT_BOOT_JARS += org.codeaurora.Performance
 
 ifneq ($(strip $(QCPATH)),)
-#PRODUCT_BOOT_JARS += qcom.fmradio
+PRODUCT_BOOT_JARS += qcom.fmradio
 #PRODUCT_BOOT_JARS += com.qti.dpmframework
 #PRODUCT_BOOT_JARS += dpmapi
 #PRODUCT_BOOT_JARS += com.qti.location.sdk
