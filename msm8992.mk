@@ -40,7 +40,7 @@ PRODUCT_BRAND := Android
 PRODUCT_MODEL := MSM8992 for arm64
 
 #PRODUCT_BOOT_JARS += vcard
-#PRODUCT_BOOT_JARS += tcmiface
+PRODUCT_BOOT_JARS += tcmiface
 #PRODUCT_BOOT_JARS += qcmediaplayer
 #PRODUCT_BOOT_JARS += org.codeaurora.Performance
 
