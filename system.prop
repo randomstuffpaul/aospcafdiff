@@ -195,3 +195,6 @@ use.voice.path.for.pcm.voip=true
 
 #selects CoreSight configuration to enable
 persist.debug.coresight.config=stm-events
+
+# Create zram disk
+ro.config.zram=true
