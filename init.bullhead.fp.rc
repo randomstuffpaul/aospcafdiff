@@ -14,5 +14,10 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_bullhead.mk
+on boot
+    chown system system /dev/fpc1020
+    chmod 660 /dev/fpc1020
+
+on post-fs-data
+    mkdir /data/fpc_tpl 770 system system
+    mkdir /data/fpc 0770 system system

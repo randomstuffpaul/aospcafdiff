@@ -14,5 +14,4 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_bullhead.mk
+add_lunch_combo aosp_bullhead-userdebug
